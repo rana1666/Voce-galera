@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina</title>
+    <link rel="stylesheet" href="estilo2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.5/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+  </head>
+  <body>
+    <h1 id="texto"></h1>
+    <div class="container">
+      <h2 class="title" id></h2>
+      <div class="result">
+        <div class="result__viewbox" id="result">STAR/STOP</div>
+        <button id="copy-btn" style="--x: 0; --y: 0">
+          <i class="far fa-copy"></i>
+        </button>
+      </div>
+      <div class="length range__slider" data-min="65" data-max="105">
+        <div class="length__title field-title" data-length="0">
+          temperatura:
+        </div>
+        <input
+          id="slider"
+          type="range"
+          min="65"
+          max="105"
+          value="90"
+          step="5"
+        />
+      </div>
+
+      <div class="settings">
+        <span class="settings__title field-title">perfiles</span>
+        <div class="setting">
+          <input type="radio" id="Te" name="contact" value="Te" />
+          <label for="Te">Te</label>
+        </div>
+        <div class="setting">
+          <input
+            type="radio"
+            id="Mate"
+            name="contact"
+            onchange="cambiar()"
+            value="Mate"
+          />
+          <label for="Mate">Mate</label>
+        </div>
+        <div class="setting">
+          <input type="radio" id="Cafe" name="contact" value="Cafe" />
+          <label for="Cafe">Cafe</label>
+        </div>
+        <div class="setting">
+          <input type="radio" id="Cocina" name="contact" value="Cocina" />
+          <label for="Cocina">Cocina</label>
+        </div>
+      </div>
+
+      <button class="btn generate" id="generate">Recuperacion</button>
+    </div>
+  </body>
+
+  <script src="funciones.js" type="module"></script>
+</html>
